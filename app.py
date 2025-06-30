@@ -4,6 +4,8 @@ from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import numpy as np
+import os
+import gdown
 import time
 
 
@@ -22,6 +24,17 @@ model = Sequential([
     Dense(3, activation='softmax', name="dense_2")
 ])
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+
+file_id = "1df8WQrhTDaZqEZ_4HczdF_BvtpP0JFc4"
+url = f"https://drive.google.com/uc?id={file_id}"
+model_path = "waste_classifier5.weights.h5"
+
+if not os.path.exists(model_path):
+    with st.spinner("🔄 Downloading model weights from Google Drive..."):
+        gdown.download(url, model_path, quiet=False)
+
+model.load_weights(model_path)
 
 
 model.load_weights("waste_classifier5.weights.h5")
