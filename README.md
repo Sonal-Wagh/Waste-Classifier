@@ -38,14 +38,27 @@ This project is a smart waste classification system that identifies whether a pi
 
  The model shows balanced performance across all three classes and serves as a reliable base model for waste sorting automation
 
- # How to Run Locally
-1. Clone the repository
-   
-2.Install dependencies
-   pip install -r requirements.txt
-   
-3.Run the app
-  streamlit run app.py
-  
-4.Visit the link in browser, upload a waste image, and get prediction with confidence score.
+## 🚀 Deployment
 
+This project is deployed on [Streamlit Cloud](https://streamlit.io/cloud). Below are the deployment steps:
+
+### 🛠️ Deployment Steps
+
+1. **Uploaded the project to GitHub** 
+2. Specified the Python version compatible with TensorFlow:
+    ```
+    python-3.10
+    ```
+3. **Used Google Drive + `gdown`** for large model file download:
+   
+4. **requirements.txt**
+    ```
+    streamlit==1.33.0
+    tensorflow==2.15.0
+    numpy
+    Pillow
+    gdown
+    ```
+5. Deployed the app on Streamlit Cloud
+
+   # [Link to Deployed app](https://waste-classifier-gcfrdpqx9wkmuhnhhotyre.streamlit.app/)
