@@ -9,6 +9,7 @@ import gdown
 import time
 
 
+st.set_page_config(page_title="♻️ Waste Classifier", page_icon="🧪", layout="centered")
 
 model = Sequential([
     Input(shape=(128, 128, 3), name="input_layer"),
@@ -41,9 +42,6 @@ model.load_weights("waste_classifier5.weights.h5")
 
 
 class_names = ['Biodegradable', 'Hazardous', 'Recyclable']
-
-
-st.set_page_config(page_title="♻️ Waste Classifier", page_icon="🧪", layout="centered")
 
 
 st.markdown("""
