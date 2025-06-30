@@ -17,12 +17,17 @@ This project is a smart waste classification system that identifies whether a pi
 
 
     Biodegradable:
+   
       Precision: 70–75%
       Recall: ~72%
+   
     Hazardous:
+   
       Precision: 65–70%
       Recall: ~68%
+   
     Recyclable:
+   
       Precision: 75–78%
       Recall: ~74%
 
